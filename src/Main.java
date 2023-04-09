@@ -14,7 +14,9 @@ public class Main {
           Если в какой-то ячейке встретился null, то необходимо “оповестить” об этом пользователя
           Если null’ы встретились в нескольких ячейках, то идеально было бы все их “подсветить”
          */
+        System.out.println("\nTask 1");
         Integer[] array = {1, 10, null, 5, 4, null, 9};
+        System.out.println(Arrays.toString(array));
         checkArray(array);
 
 
@@ -25,6 +27,7 @@ public class Main {
           каждый элемент которого равен сумме элементов двух входящих массивов в той же ячейке.
           Если длины массивов не равны, необходимо как-то оповестить пользователя.
          */
+        System.out.println("\nTask 2");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the first array of integers > ");
         String line1 = scanner.nextLine();
@@ -65,11 +68,12 @@ public class Main {
           Метод должен проверить что длина строк и столбцов с одинаковым индексом одинакова,
           детализировать какие строки со столбцами не требуется.
          */
+        System.out.println("\nTask 3");
         int[][] matrix1 = {{1, 2, 3, 4}, {21, 22, 23}, {31, 32}, {41}};
         printIntMatrix(matrix1);
         checkMatrix(matrix1);
         System.out.println();
-        int[][] matrix2 = {{1, 2, 3, 4}, {21, 22, 23}, {31, 31}};
+        int[][] matrix2 = {{1, 2, 3, 4}, {21, 22, 23}, {31, 32}};
         printIntMatrix(matrix2);
         checkMatrix(matrix2);
     }
@@ -107,6 +111,7 @@ public class Main {
                     int temp = matrix[col][row];
                 }
             }
+            System.out.println("The length of rows and columns with the same index is equal");
         } catch (ArrayIndexOutOfBoundsException exception) {
             System.out.println("The length of rows and columns with the same index is not equal");
         }

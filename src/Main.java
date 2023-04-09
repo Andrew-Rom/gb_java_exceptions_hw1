@@ -58,6 +58,20 @@ public class Main {
 
         sumOfTwoArrays(firstArray, secondArray);
 
+
+        /*
+          HW1. Task3
+          Реализуйте метод, принимающий в качестве аргументов двумерный массив.
+          Метод должен проверить что длина строк и столбцов с одинаковым индексом одинакова,
+          детализировать какие строки со столбцами не требуется.
+         */
+        int[][] matrix1 = {{1, 2, 3, 4}, {21, 22, 23}, {31, 32}, {41}};
+        printIntMatrix(matrix1);
+        checkMatrix(matrix1);
+        System.out.println();
+        int[][] matrix2 = {{1, 2, 3, 4}, {21, 22, 23}, {31, 31}};
+        printIntMatrix(matrix2);
+        checkMatrix(matrix2);
     }
 
     public static void checkArray(Integer[] checkArr) {
@@ -85,4 +99,26 @@ public class Main {
             System.out.println("Error! " + exception.getMessage());
         }
     }
+
+    public static void checkMatrix(int[][] matrix) {
+        try {
+            for (int row = 0; row < matrix.length; row++) {
+                for (int col = 0; col < matrix[row].length; col++) {
+                    int temp = matrix[col][row];
+                }
+            }
+        } catch (ArrayIndexOutOfBoundsException exception) {
+            System.out.println("The length of rows and columns with the same index is not equal");
+        }
+    }
+
+    public static void printIntMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
 }
